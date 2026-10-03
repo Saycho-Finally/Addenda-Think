@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "suite": "gsm8k",
+    "n_items": 100,
+    "adapter": "api:deepseek-flash",
+    "ts": 1790830362.715442
+  },
+  "arms": [
+    {
+      "arm": "deepseek-flash@high",
+      "n_calls": 100,
+      "completion_tokens": 25541,
+      "prompt_tokens": 8685,
+      "reasoning_tokens": 18491,
+      "wall_clock": 164.729,
+      "completion_ratio_vs_max": 0.5828
+    },
+    {
+      "arm": "deepseek-flash@low",
+      "n_calls": 100,
+      "completion_tokens": 20990,
+      "prompt_tokens": 8685,
+      "reasoning_tokens": 13989,
+      "wall_clock": 142.833,
+      "completion_ratio_vs_max": 0.4789
+    },
+    {
+      "arm": "deepseek-flash@max",
+      "n_calls": 100,
+      "completion_tokens": 43826,
+      "prompt_tokens": 8685,
+      "reasoning_tokens": 37555,
+      "wall_clock": 244.445,
+      "completion_ratio_vs_max": 1.0
+    },
+    {
+      "arm": "deepseek-flash@off",
+      "n_calls": 100,
+      "completion_tokens": 17838,
+      "prompt_tokens": 6085,
+      "reasoning_tokens": null,
+      "wall_clock": 120.73,
+      "completion_ratio_vs_max": 0.407
+    }
+  ]
+}

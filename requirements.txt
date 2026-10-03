@@ -1,0 +1,8 @@
+# API 模式（stage0/e1 的 deepseek 接入）仅需：
+requests>=2.28
+
+# 本地 4B 对照（可选，6GB 显卡）：
+# transformers>=4.44
+# torch>=2.1
+# accelerate
+# bitsandbytes

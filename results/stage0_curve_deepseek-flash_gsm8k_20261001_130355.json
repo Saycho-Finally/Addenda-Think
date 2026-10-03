@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "suite": "gsm8k",
+    "n": 100,
+    "tag": "deepseek-flash",
+    "ts": "20261001_130355"
+  },
+  "grid": [
+    {
+      "arm": "deepseek-flash@off",
+      "effort": "off",
+      "n": 100,
+      "n_correct": 99,
+      "accuracy": 0.99,
+      "avg_completion_tokens": 178.4,
+      "avg_wall": 1.21
+    },
+    {
+      "arm": "deepseek-flash@low",
+      "effort": "low",
+      "n": 100,
+      "n_correct": 95,
+      "accuracy": 0.95,
+      "avg_completion_tokens": 209.9,
+      "avg_wall": 1.43
+    },
+    {
+      "arm": "deepseek-flash@high",
+      "effort": "high",
+      "n": 100,
+      "n_correct": 85,
+      "accuracy": 0.85,
+      "avg_completion_tokens": 255.4,
+      "avg_wall": 1.65
+    },
+    {
+      "arm": "deepseek-flash@max",
+      "effort": "max",
+      "n": 100,
+      "n_correct": 90,
+      "accuracy": 0.9,
+      "avg_completion_tokens": 438.3,
+      "avg_wall": 2.44
+    }
+  ]
+}

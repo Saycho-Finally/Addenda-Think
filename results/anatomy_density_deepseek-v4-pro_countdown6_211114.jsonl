@@ -1,0 +1,61 @@
+{
+  "tag": "deepseek-v4-pro",
+  "suite": "countdown6",
+  "n": 10,
+  "arms": [
+    {
+      "arm": "low",
+      "task": "countdown6",
+      "n_samples": 10,
+      "n_tokens": 50324,
+      "counts": {
+        "exploration": 51,
+        "verification": 89,
+        "backtracking": 14,
+        "memory_mgmt": 1
+      },
+      "events_per_1k_tokens": {
+        "exploration": 1.013,
+        "verification": 1.769,
+        "backtracking": 0.278,
+        "memory_mgmt": 0.02
+      }
+    },
+    {
+      "arm": "high",
+      "task": "countdown6",
+      "n_samples": 10,
+      "n_tokens": 51413,
+      "counts": {
+        "exploration": 746,
+        "verification": 52,
+        "backtracking": 59,
+        "memory_mgmt": 39
+      },
+      "events_per_1k_tokens": {
+        "exploration": 14.51,
+        "verification": 1.011,
+        "backtracking": 1.148,
+        "memory_mgmt": 0.759
+      }
+    },
+    {
+      "arm": "max",
+      "task": "countdown6",
+      "n_samples": 10,
+      "n_tokens": 54826,
+      "counts": {
+        "exploration": 825,
+        "verification": 62,
+        "backtracking": 64,
+        "memory_mgmt": 50
+      },
+      "events_per_1k_tokens": {
+        "exploration": 15.048,
+        "verification": 1.131,
+        "backtracking": 1.167,
+        "memory_mgmt": 0.912
+      }
+    }
+  ]
+}

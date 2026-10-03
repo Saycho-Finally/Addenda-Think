@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "suite": "builtin",
+    "n": 10,
+    "tag": "local",
+    "ts": "20261001_120852"
+  },
+  "grid": [
+    {
+      "arm": "local@xlow(budget=64)",
+      "arm_label": "xlow",
+      "budget": 64,
+      "n": 10,
+      "n_correct": 7,
+      "accuracy": 0.7,
+      "avg_completion_tokens": 655.1,
+      "avg_wall": 77.51,
+      "truncation_rate": 1.0
+    },
+    {
+      "arm": "local@low(budget=256)",
+      "arm_label": "low",
+      "budget": 256,
+      "n": 10,
+      "n_correct": 7,
+      "accuracy": 0.7,
+      "avg_completion_tokens": 547.3,
+      "avg_wall": 68.05,
+      "truncation_rate": 1.0
+    },
+    {
+      "arm": "local@medium(budget=1024)",
+      "arm_label": "medium",
+      "budget": 1024,
+      "n": 10,
+      "n_correct": 6,
+      "accuracy": 0.6,
+      "avg_completion_tokens": 843.7,
+      "avg_wall": 106.26,
+      "truncation_rate": 0.1
+    },
+    {
+      "arm": "local@high(budget=2048)",
+      "arm_label": "high",
+      "budget": 2048,
+      "n": 10,
+      "n_correct": 7,
+      "accuracy": 0.7,
+      "avg_completion_tokens": 960.3,
+      "avg_wall": 93.12,
+      "truncation_rate": 0.0
+    }
+  ]
+}

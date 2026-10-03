@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-01",
+  "source": "DeepSeek 官方后台结算页",
+  "cache_note": "缓存命中几乎为零：flash 0/65,250，pro 10,240/113,030 (9%)。原因：stage0/curve 类调用每题 prompt 各不相同，无前缀可共享；E1 的 low×N 采样本应命中同 prompt 前缀（pro 的 10,240 命中即来自它），但 prompt 仅 ~100-200 token，命中收益上限就低；输出思考 token（占总量 92-95%）永远不命中。结论：缓存优化对本项目成本结构影响 <5%，不是杠杆；真正的杠杆是 off-peak 时段与档位选择。",
+  "reconciliation_note": "ledger 覆盖率：flash 597K/753K=79%，pro 845K/1956K=43%。缺口来自未落盘的崩掉/中止 run（402 中断、TaskStop、E1 首跑强度臂）。官方后台为唯一真账，本文件即按官方口径。",
+  "rows": [
+    {
+      "model": "deepseek-flash",
+      "calls": 753,
+      "in_hit": 0,
+      "in_miss": 65250,
+      "out": 752962,
+      "off_only_usd": 0.462,
+      "peak_only_usd": 0.923,
+      "mix_est_usd": 0.56,
+      "mix_est_cny": 4.0
+    },
+    {
+      "model": "deepseek-v4-pro",
+      "calls": 1048,
+      "in_hit": 10240,
+      "in_miss": 102790,
+      "out": 1956095,
+      "off_only_usd": 3.941,
+      "peak_only_usd": 7.883,
+      "mix_est_usd": 4.71,
+      "mix_est_cny": 33.7
+    }
+  ],
+  "total_mix_usd": 5.27,
+  "total_mix_cny": 37.7
+}

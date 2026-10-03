@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "suite": "gsm8k",
+    "n_items": 100,
+    "adapter": "local:Qwen3-4B-Thinking-2507",
+    "ts": 1790830386.4154797
+  },
+  "arms": [
+    {
+      "arm": "local@high(budget=2048)",
+      "n_calls": 100,
+      "completion_tokens": 123040,
+      "prompt_tokens": 6923,
+      "reasoning_tokens": 95432,
+      "wall_clock": 10183.412,
+      "completion_ratio_vs_max": 1.0
+    },
+    {
+      "arm": "local@low(budget=256)",
+      "n_calls": 100,
+      "completion_tokens": 66929,
+      "prompt_tokens": 6923,
+      "reasoning_tokens": 25599,
+      "wall_clock": 9919.531,
+      "completion_ratio_vs_max": 0.544
+    },
+    {
+      "arm": "local@medium(budget=1024)",
+      "n_calls": 100,
+      "completion_tokens": 101241,
+      "prompt_tokens": 6923,
+      "reasoning_tokens": 75714,
+      "wall_clock": 8344.374,
+      "completion_ratio_vs_max": 0.8228
+    },
+    {
+      "arm": "local@xlow(budget=64)",
+      "n_calls": 100,
+      "completion_tokens": 109787,
+      "prompt_tokens": 6923,
+      "reasoning_tokens": 6400,
+      "wall_clock": 41554.054,
+      "completion_ratio_vs_max": 0.8923
+    }
+  ]
+}

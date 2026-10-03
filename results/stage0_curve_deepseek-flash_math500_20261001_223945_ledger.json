@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "suite": "math500",
+    "n_items": 50,
+    "adapter": "api:deepseek-flash",
+    "ts": 1790864532.8595238
+  },
+  "arms": [
+    {
+      "arm": "deepseek-flash@high",
+      "n_calls": 50,
+      "completion_tokens": 65502,
+      "prompt_tokens": 5425,
+      "reasoning_tokens": 56626,
+      "wall_clock": 307.449,
+      "completion_ratio_vs_max": 0.9891
+    },
+    {
+      "arm": "deepseek-flash@low",
+      "n_calls": 50,
+      "completion_tokens": 51370,
+      "prompt_tokens": 5425,
+      "reasoning_tokens": 43300,
+      "wall_clock": 245.696,
+      "completion_ratio_vs_max": 0.7757
+    },
+    {
+      "arm": "deepseek-flash@max",
+      "n_calls": 50,
+      "completion_tokens": 66222,
+      "prompt_tokens": 5425,
+      "reasoning_tokens": 58247,
+      "wall_clock": 312.754,
+      "completion_ratio_vs_max": 1.0
+    },
+    {
+      "arm": "deepseek-flash@off",
+      "n_calls": 50,
+      "completion_tokens": 43974,
+      "prompt_tokens": 4125,
+      "reasoning_tokens": null,
+      "wall_clock": 186.835,
+      "completion_ratio_vs_max": 0.664
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "suite": "builtin",
+    "n_items": 10,
+    "adapter": "local:Qwen3-4B-Thinking-2507",
+    "ts": 1790824283.3238301
+  },
+  "arms": [
+    {
+      "arm": "local@high(budget=2048)",
+      "n_calls": 10,
+      "completion_tokens": 9603,
+      "prompt_tokens": 316,
+      "reasoning_tokens": 7170,
+      "wall_clock": 931.147,
+      "completion_ratio_vs_max": 1.0
+    },
+    {
+      "arm": "local@low(budget=256)",
+      "n_calls": 10,
+      "completion_tokens": 5473,
+      "prompt_tokens": 316,
+      "reasoning_tokens": 2560,
+      "wall_clock": 680.456,
+      "completion_ratio_vs_max": 0.5699
+    },
+    {
+      "arm": "local@medium(budget=1024)",
+      "n_calls": 10,
+      "completion_tokens": 8437,
+      "prompt_tokens": 316,
+      "reasoning_tokens": 6452,
+      "wall_clock": 1062.572,
+      "completion_ratio_vs_max": 0.8786
+    },
+    {
+      "arm": "local@xlow(budget=64)",
+      "n_calls": 10,
+      "completion_tokens": 6551,
+      "prompt_tokens": 316,
+      "reasoning_tokens": 640,
+      "wall_clock": 775.068,
+      "completion_ratio_vs_max": 0.6822
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "suite": "gsm8k",
+    "n_items": 100,
+    "adapter": "api:deepseek-v4-pro",
+    "ts": 1790831038.276807
+  },
+  "arms": [
+    {
+      "arm": "deepseek-v4-pro@high",
+      "n_calls": 100,
+      "completion_tokens": 46673,
+      "prompt_tokens": 13985,
+      "reasoning_tokens": 39877,
+      "wall_clock": 506.642,
+      "completion_ratio_vs_max": 0.8032
+    },
+    {
+      "arm": "deepseek-v4-pro@low",
+      "n_calls": 100,
+      "completion_tokens": 29621,
+      "prompt_tokens": 6085,
+      "reasoning_tokens": 22682,
+      "wall_clock": 342.429,
+      "completion_ratio_vs_max": 0.5097
+    },
+    {
+      "arm": "deepseek-v4-pro@max",
+      "n_calls": 100,
+      "completion_tokens": 58111,
+      "prompt_tokens": 15285,
+      "reasoning_tokens": 50828,
+      "wall_clock": 647.981,
+      "completion_ratio_vs_max": 1.0
+    },
+    {
+      "arm": "deepseek-v4-pro@off",
+      "n_calls": 100,
+      "completion_tokens": 16604,
+      "prompt_tokens": 6085,
+      "reasoning_tokens": null,
+      "wall_clock": 210.456,
+      "completion_ratio_vs_max": 0.2857
+    }
+  ]
+}

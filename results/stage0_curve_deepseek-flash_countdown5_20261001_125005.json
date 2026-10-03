@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "suite": "countdown5",
+    "n": 10,
+    "tag": "deepseek-flash",
+    "ts": "20261001_125005"
+  },
+  "grid": [
+    {
+      "arm": "deepseek-flash@off",
+      "effort": "off",
+      "n": 10,
+      "n_correct": 9,
+      "accuracy": 0.9,
+      "avg_completion_tokens": 1308.8,
+      "avg_wall": 5.72
+    },
+    {
+      "arm": "deepseek-flash@low",
+      "effort": "low",
+      "n": 10,
+      "n_correct": 10,
+      "accuracy": 1.0,
+      "avg_completion_tokens": 818.6,
+      "avg_wall": 4.23
+    },
+    {
+      "arm": "deepseek-flash@high",
+      "effort": "high",
+      "n": 10,
+      "n_correct": 10,
+      "accuracy": 1.0,
+      "avg_completion_tokens": 1646.7,
+      "avg_wall": 7.57
+    },
+    {
+      "arm": "deepseek-flash@max",
+      "effort": "max",
+      "n": 10,
+      "n_correct": 9,
+      "accuracy": 0.9,
+      "avg_completion_tokens": 1002.9,
+      "avg_wall": 5.03
+    }
+  ]
+}

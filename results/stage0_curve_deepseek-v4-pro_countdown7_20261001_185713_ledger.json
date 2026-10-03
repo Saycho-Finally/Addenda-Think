@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "suite": "countdown7",
+    "n_items": 10,
+    "adapter": "api:deepseek-v4-pro",
+    "ts": 1790850577.3044503
+  },
+  "arms": [
+    {
+      "arm": "deepseek-v4-pro@high",
+      "n_calls": 10,
+      "completion_tokens": 49714,
+      "prompt_tokens": 1653,
+      "reasoning_tokens": 48773,
+      "wall_clock": 491.023,
+      "completion_ratio_vs_max": 0.7589
+    },
+    {
+      "arm": "deepseek-v4-pro@low",
+      "n_calls": 10,
+      "completion_tokens": 36791,
+      "prompt_tokens": 863,
+      "reasoning_tokens": 35943,
+      "wall_clock": 415.102,
+      "completion_ratio_vs_max": 0.5616
+    },
+    {
+      "arm": "deepseek-v4-pro@max",
+      "n_calls": 10,
+      "completion_tokens": 65511,
+      "prompt_tokens": 1783,
+      "reasoning_tokens": 64641,
+      "wall_clock": 663.567,
+      "completion_ratio_vs_max": 1.0
+    },
+    {
+      "arm": "deepseek-v4-pro@off",
+      "n_calls": 10,
+      "completion_tokens": 8710,
+      "prompt_tokens": 863,
+      "reasoning_tokens": null,
+      "wall_clock": 85.991,
+      "completion_ratio_vs_max": 0.133
+    }
+  ]
+}

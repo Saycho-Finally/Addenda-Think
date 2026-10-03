@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "suite": "builtin",
+    "n": 10,
+    "tag": "deepseek-v4-pro",
+    "ts": "20261001_123246"
+  },
+  "grid": [
+    {
+      "arm": "deepseek-v4-pro@off",
+      "effort": "off",
+      "n": 10,
+      "n_correct": 7,
+      "accuracy": 0.7,
+      "avg_completion_tokens": 166.2,
+      "avg_wall": 2.22
+    },
+    {
+      "arm": "deepseek-v4-pro@low",
+      "effort": "low",
+      "n": 10,
+      "n_correct": 6,
+      "accuracy": 0.6,
+      "avg_completion_tokens": 148.4,
+      "avg_wall": 2.11
+    },
+    {
+      "arm": "deepseek-v4-pro@high",
+      "effort": "high",
+      "n": 10,
+      "n_correct": 7,
+      "accuracy": 0.7,
+      "avg_completion_tokens": 166.9,
+      "avg_wall": 2.33
+    },
+    {
+      "arm": "deepseek-v4-pro@max",
+      "effort": "max",
+      "n": 10,
+      "n_correct": 7,
+      "accuracy": 0.7,
+      "avg_completion_tokens": 173.1,
+      "avg_wall": 2.21
+    }
+  ]
+}

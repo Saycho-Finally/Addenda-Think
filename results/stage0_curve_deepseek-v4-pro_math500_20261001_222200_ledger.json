@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "suite": "math500",
+    "n_items": 50,
+    "adapter": "api:deepseek-v4-pro",
+    "ts": 1790862012.1633613
+  },
+  "arms": [
+    {
+      "arm": "deepseek-v4-pro@high",
+      "n_calls": 50,
+      "completion_tokens": 89679,
+      "prompt_tokens": 8075,
+      "reasoning_tokens": 80348,
+      "wall_clock": 839.521,
+      "completion_ratio_vs_max": 0.9848
+    },
+    {
+      "arm": "deepseek-v4-pro@low",
+      "n_calls": 50,
+      "completion_tokens": 47426,
+      "prompt_tokens": 4125,
+      "reasoning_tokens": 39387,
+      "wall_clock": 493.677,
+      "completion_ratio_vs_max": 0.5208
+    },
+    {
+      "arm": "deepseek-v4-pro@max",
+      "n_calls": 50,
+      "completion_tokens": 91064,
+      "prompt_tokens": 8725,
+      "reasoning_tokens": 81108,
+      "wall_clock": 860.589,
+      "completion_ratio_vs_max": 1.0
+    },
+    {
+      "arm": "deepseek-v4-pro@off",
+      "n_calls": 50,
+      "completion_tokens": 37524,
+      "prompt_tokens": 4125,
+      "reasoning_tokens": null,
+      "wall_clock": 313.83,
+      "completion_ratio_vs_max": 0.4121
+    }
+  ]
+}

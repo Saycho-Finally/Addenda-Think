@@ -3,7 +3,6 @@
 **一句话**：推理强度旋钮（effort 档位）的价值**只在任务的能力边缘存在，且集中在第一档**——本项目用三个模型（DeepSeek deepseek-flash/ deepseek-v4-pro / 本地 Qwen3-4B）× 三类任务 × 18 个强度-采样任务点实测了这一点，并提出用**外挂采样（N 路便宜采样 + 数值投票 + 早停）替代高价位档位**：在能力边缘与深边缘任务上，零思考 × 4 路采样（off×4）达到 100% 精度，成本为同精度替代方案（high×4）的约一半（cd6：$0.48 vs $1.02）。
 
 > 作者：Sycho-Finally（独立研究者）｜ AI 使用声明见 [AI_DISCLOSURE.md](AI_DISCLOSURE.md) ｜ License: MIT
-> 系列定位：Addenda 外挂系列第三件（学习外挂 Addenda-LM 管"知道什么"、缓存外挂 Addenda-Cache 管"重复什么"、本仓库管"想多深"）
 
 ---
 
@@ -86,6 +85,6 @@ python experiments/stage0_curve.py --suite gsm8k --n 100 --model_path <Qwen3-4B-
 - Self-Consistency（Wang et al. 2022）与早停变体（ESC/ASC/CGES）：采样与投票机制来源
 - LLMThinkBench：基础任务上推理增益有限的先例
 - Apple（2025）：推理链的三区制（有效/冗余/有害）——overthinking 的概念来源
-- Reasonix：DeepSeek 前缀缓存纪律与三区会话（详见 Addenda-Cache）
+- Reasonix：DeepSeek 前缀缓存纪律与三区会话
 - NVIDIA Dynamo 文档：块价值分层（thinking token 零复用）
 - Vercel Jev / AWS Strands Decider：决策模型品类（本文的"判定应外挂化"立场的对照面）

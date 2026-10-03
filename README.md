@@ -1,6 +1,6 @@
 # Addenda-Think ｜ 补遗：推理强度与采样广度的等算力分配 · 三模型实验验证
 
-**一句话**：推理强度旋钮（effort 档位）的价值**只在任务的能力边缘存在，且集中在第一档**——本项目用三个模型（DeepSeek deepseek-flash（V4.1-Flash）/ deepseek-v4-pro / 本地 Qwen3-4B）× 三类任务 × 18 个强度-采样任务点实测了这一点，并提出用**外挂采样（N 路便宜采样 + 数值投票 + 早停）替代高价位档位**：在能力边缘与深边缘任务上，零思考 × 4 路采样（off×4）达到 100% 精度，成本仅为主流"max 档"方案的 1/4~1/8。
+**一句话**：推理强度旋钮（effort 档位）的价值**只在任务的能力边缘存在，且集中在第一档**——本项目用三个模型（DeepSeek deepseek-flash/ deepseek-v4-pro / 本地 Qwen3-4B）× 三类任务 × 18 个强度-采样任务点实测了这一点，并提出用**外挂采样（N 路便宜采样 + 数值投票 + 早停）替代高价位档位**：在能力边缘与深边缘任务上，零思考 × 4 路采样（off×4）达到 100% 精度，成本仅为主流"max 档"方案的 1/4~1/8。
 
 > 作者：Sycho-Finally（独立研究者）｜ AI 使用声明见 [AI_DISCLOSURE.md](AI_DISCLOSURE.md) ｜ License: MIT
 > 系列定位：Addenda 外挂系列第三件（学习外挂 Addenda-LM 管"知道什么"、缓存外挂 Addenda-Cache 管"重复什么"、本仓库管"想多深"）
@@ -9,7 +9,7 @@
 
 ## 这个仓库能做什么（四件事，均有实验数字）
 
-1. **强度-精度曲线的三模型实测**——DeepSeek deepseek-flash（V4.1-Flash）、deepseek-v4-pro、本地 Qwen3-4B（budget forcing）在 GSM8K-100 / Countdown-5/6/7 / MATH-500 L4-5 上的完整 effort 档位曲线，18 个任务点的精度与逐笔成本。
+1. **强度-精度曲线的三模型实测**——DeepSeek deepseek-flash、deepseek-v4-pro、本地 Qwen3-4B（budget forcing）在 GSM8K-100 / Countdown-5/6/7 / MATH-500 L4-5 上的完整 effort 档位曲线，18 个任务点的精度与逐笔成本。
 2. **overthinking 的四次独立复现**——高价位档位（max）在 4 个独立场景中无一最优，其中 n=100 规模上 medium 档比 64-token 档**低 14 分**（0.77 vs 0.91，统计显著）。
 3. **E1 等算力对账框架**——11 臂（4 强度档 × 1 + low×{2,4,8} + high×{2,4} + off×{4,8}）× 逐笔 hit/miss/token 记账，直接输出"每百分点精度值多少美元"的 Pareto 对账。
 4. **外挂采样的边界实测**——零思考 × 4 路采样（off×4）在能力边缘（Countdown-6，n=12）与深边缘（Countdown-7，n=6）双双 100%，成本比 1×max 低 56%~78%；同时给出**不成立的边界**（详见「这个仓库不是什么」）。

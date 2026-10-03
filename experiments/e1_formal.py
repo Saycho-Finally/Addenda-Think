@@ -44,7 +44,7 @@ ARMS = [
 STOP_K = 3
 
 # DeepSeek v4-pro off-peak 单价（USD/token）
-PRICE_OFF = {"in_hit": 0.036e-6, "in_miss": 0.66e-6, "out": 1.98e-6}
+PRICE_OFF = {"in_hit": 0.022e-6, "in_miss": 0.66e-6, "out": 1.98e-6}  # 官方定价页：pro hit off-peak $0.022/M（2026-10-03 核对）
 
 
 def build_suite(name: str, n: int):

@@ -88,3 +88,13 @@ python experiments/stage0_curve.py --suite gsm8k --n 100 --model_path <Qwen3-4B-
 - Reasonix：DeepSeek 前缀缓存纪律与三区会话
 - NVIDIA Dynamo 文档：块价值分层（thinking token 零复用）
 - Vercel Jev / AWS Strands Decider：决策模型品类（本文的"判定应外挂化"立场的对照面）
+
+
+---
+
+## 贡献与引用
+
+- 贡献指南见 [CONTRIBUTING.md](CONTRIBUTING.md)；行为准则见 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- 安全问题请走 [SECURITY.md](SECURITY.md) 的私密渠道（勿开公开 Issue）
+- 版本变更见 [CHANGELOG.md](CHANGELOG.md)；学术引用格式见 [CITATION.cff](CITATION.cff)
+- 许可：MIT

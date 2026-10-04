@@ -1,0 +1,776 @@
+{
+  "summary": {
+    "A_original": {
+      "compress_ratio": 0.0,
+      "answer_consistency": 1.0,
+      "n": 30
+    },
+    "B_truncate": {
+      "compress_ratio": 0.5,
+      "answer_consistency": 0.267,
+      "n": 30
+    },
+    "C_prune": {
+      "compress_ratio": 0.099,
+      "answer_consistency": 0.733,
+      "n": 30
+    },
+    "D_memento": {
+      "compress_ratio": 0.959,
+      "answer_consistency": 0.5,
+      "n": 30
+    }
+  },
+  "detail": [
+    {
+      "idx": 0,
+      "orig_chars": 16292,
+      "base_answer": "4*((100-9)*25-(25-1))",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "4*((100-9)*25-(25-1))"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "100×(25×4-9-(25-1)/25)"
+      },
+      "C_prune": {
+        "ratio": 0.962,
+        "consistent": true,
+        "answer": "4*((100-9)*25-(25-1))"
+      },
+      "D_memento": {
+        "ratio": 0.078,
+        "consistent": false,
+        "answer": "信息不足"
+      }
+    },
+    {
+      "idx": 1,
+      "orig_chars": 2796,
+      "base_answer": "100*6-(100-75+13-4)",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "100*6-(100-75+13-4)"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "6*100-(100-75+13-4)"
+      },
+      "C_prune": {
+        "ratio": 0.96,
+        "consistent": true,
+        "answer": "100*6-(100-75+13-4)"
+      },
+      "D_memento": {
+        "ratio": 0.034,
+        "consistent": true,
+        "answer": "100*6-(100-75+13-4)"
+      }
+    },
+    {
+      "idx": 2,
+      "orig_chars": 24473,
+      "base_answer": "信息不足",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "信息不足"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": true,
+        "answer": "信息不足"
+      },
+      "C_prune": {
+        "ratio": 0.948,
+        "consistent": true,
+        "answer": "信息不足"
+      },
+      "D_memento": {
+        "ratio": 0.05,
+        "consistent": true,
+        "answer": "信息不足"
+      }
+    },
+    {
+      "idx": 3,
+      "orig_chars": 4452,
+      "base_answer": "(100-75)*5-13+11+5",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "(100-75)*5-13+11+5"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "信息不足"
+      },
+      "C_prune": {
+        "ratio": 0.948,
+        "consistent": false,
+        "answer": "128)(100-75)*5-13+11+5"
+      },
+      "D_memento": {
+        "ratio": 0.022,
+        "consistent": false,
+        "answer": "128"
+      }
+    },
+    {
+      "idx": 4,
+      "orig_chars": 7426,
+      "base_answer": "(50-7)*(8/(9-7))-1",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "(50-7)*(8/(9-7))-1"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "信息不足"
+      },
+      "C_prune": {
+        "ratio": 0.945,
+        "consistent": false,
+        "answer": "171)(50-7)*(8/(9-7))-1"
+      },
+      "D_memento": {
+        "ratio": 0.017,
+        "consistent": true,
+        "answer": "(50-7)*(8/(9-7))-1"
+      }
+    },
+    {
+      "idx": 5,
+      "orig_chars": 3858,
+      "base_answer": "1518)(25*13-9*(5+3))*(3+3)",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "1518)(25*13-9*(5+3))*(3+3)"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "(5**3)*(9+3)+25-13+3"
+      },
+      "C_prune": {
+        "ratio": 0.955,
+        "consistent": true,
+        "answer": "1518)(25*13-9*(5+3))*(3+3)"
+      },
+      "D_memento": {
+        "ratio": 0.026,
+        "consistent": false,
+        "answer": "(25*13-9*(5+3))*(3+3)"
+      }
+    },
+    {
+      "idx": 6,
+      "orig_chars": 4466,
+      "base_answer": "100+13+3+3+(100/25)",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "100+13+3+3+(100/25)"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "100+25-(100/100+3/3)+13-13"
+      },
+      "C_prune": {
+        "ratio": 0.964,
+        "consistent": true,
+        "answer": "100+13+3+3+(100/25)"
+      },
+      "D_memento": {
+        "ratio": 0.022,
+        "consistent": true,
+        "answer": "100+13+3+3+(100/25)"
+      }
+    },
+    {
+      "idx": 7,
+      "orig_chars": 1957,
+      "base_answer": "75+50-2+(25-25)*1",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "75+50-2+(25-25)*1"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "75+50-2+(25-25)*175+50-2+(25-25)*1"
+      },
+      "C_prune": {
+        "ratio": 0.963,
+        "consistent": true,
+        "answer": "75+50-2+(25-25)*1"
+      },
+      "D_memento": {
+        "ratio": 0.039,
+        "consistent": true,
+        "answer": "75+50-2+(25-25)*1"
+      }
+    },
+    {
+      "idx": 8,
+      "orig_chars": 2508,
+      "base_answer": "100+13+11+8+6*1",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "100+13+11+8+6*1"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": true,
+        "answer": "100+13+11+8+6*1"
+      },
+      "C_prune": {
+        "ratio": 0.966,
+        "consistent": false,
+        "answer": "13+11+8+6"
+      },
+      "D_memento": {
+        "ratio": 0.037,
+        "consistent": true,
+        "answer": "100+13+11+8+6*1"
+      }
+    },
+    {
+      "idx": 9,
+      "orig_chars": 10022,
+      "base_answer": "157100+(13-7)*8+3*3",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "157100+(13-7)*8+3*3"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "100+7*8+13**(3-3)"
+      },
+      "C_prune": {
+        "ratio": 0.96,
+        "consistent": false,
+        "answer": "100+(13-7)*8+3*3"
+      },
+      "D_memento": {
+        "ratio": 0.014,
+        "consistent": false,
+        "answer": "100+7*8+13**(3-3)"
+      }
+    },
+    {
+      "idx": 10,
+      "orig_chars": 21377,
+      "base_answer": "4*(25*(100-9)-(25-1))",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "4*(25*(100-9)-(25-1))"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "信息不足"
+      },
+      "C_prune": {
+        "ratio": 0.891,
+        "consistent": true,
+        "answer": "4*(25*(100-9)-(25-1))"
+      },
+      "D_memento": {
+        "ratio": 0.031,
+        "consistent": false,
+        "answer": "100*(25*(4-1)+25-9)-4*(25-1)"
+      }
+    },
+    {
+      "idx": 11,
+      "orig_chars": 5075,
+      "base_answer": "600)-(100-75+13-4",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "600)-(100-75+13-4"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "566)6*100-(100-75+13-4)"
+      },
+      "C_prune": {
+        "ratio": 0.786,
+        "consistent": true,
+        "answer": "600)-(100-75+13-4"
+      },
+      "D_memento": {
+        "ratio": 0.019,
+        "consistent": false,
+        "answer": "6*100-(100-75+13-4)"
+      }
+    },
+    {
+      "idx": 12,
+      "orig_chars": 41968,
+      "base_answer": "信息不足",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "信息不足"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": true,
+        "answer": "信息不足"
+      },
+      "C_prune": {
+        "ratio": 0.896,
+        "consistent": true,
+        "answer": "信息不足"
+      },
+      "D_memento": {
+        "ratio": 0.073,
+        "consistent": true,
+        "answer": "信息不足"
+      }
+    },
+    {
+      "idx": 13,
+      "orig_chars": 9701,
+      "base_answer": "75+100-(5*11+5-13)",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "75+100-(5*11+5-13)"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "12875+100-(5*11-13+5)"
+      },
+      "C_prune": {
+        "ratio": 0.889,
+        "consistent": true,
+        "answer": "75+100-(5*11+5-13)"
+      },
+      "D_memento": {
+        "ratio": 0.012,
+        "consistent": false,
+        "answer": "75+100-(5*11-13+5)"
+      }
+    },
+    {
+      "idx": 14,
+      "orig_chars": 16371,
+      "base_answer": "50+9+7*(8+7+1)",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "50+9+7*(8+7+1)"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "信息不足"
+      },
+      "C_prune": {
+        "ratio": 0.901,
+        "consistent": true,
+        "answer": "50+9+7*(8+7+1)"
+      },
+      "D_memento": {
+        "ratio": 0.173,
+        "consistent": false,
+        "answer": "信息不足"
+      }
+    },
+    {
+      "idx": 15,
+      "orig_chars": 12093,
+      "base_answer": "25-5+3)((13+9)*3)*(25-5+3)",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "25-5+3)((13+9)*3)*(25-5+3)"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "信息不足"
+      },
+      "C_prune": {
+        "ratio": 0.926,
+        "consistent": false,
+        "answer": "((13+9)*3)*(25-5+3)"
+      },
+      "D_memento": {
+        "ratio": 0.015,
+        "consistent": false,
+        "answer": "25×(13×5"
+      }
+    },
+    {
+      "idx": 16,
+      "orig_chars": 2799,
+      "base_answer": "100+13+3+3+(100/25)",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "100+13+3+3+(100/25)"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "100+13+3+3+100/25"
+      },
+      "C_prune": {
+        "ratio": 0.931,
+        "consistent": true,
+        "answer": "100+13+3+3+(100/25)"
+      },
+      "D_memento": {
+        "ratio": 0.037,
+        "consistent": true,
+        "answer": "100+13+3+3+(100/25)"
+      }
+    },
+    {
+      "idx": 17,
+      "orig_chars": 2893,
+      "base_answer": "75+50-2+(25-25)*1",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "75+50-2+(25-25)*1"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": true,
+        "answer": "75+50-2+(25-25)*1"
+      },
+      "C_prune": {
+        "ratio": 0.941,
+        "consistent": true,
+        "answer": "75+50-2+(25-25)*1"
+      },
+      "D_memento": {
+        "ratio": 0.037,
+        "consistent": true,
+        "answer": "75+50-2+(25-25)*1"
+      }
+    },
+    {
+      "idx": 18,
+      "orig_chars": 20835,
+      "base_answer": "100+13*(6+8-11)-1",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "100+13*(6+8-11)-1"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "(6+8+11+13+100)*1(6+8+11+13+100)*1"
+      },
+      "C_prune": {
+        "ratio": 0.826,
+        "consistent": true,
+        "answer": "100+13*(6+8-11)-1"
+      },
+      "D_memento": {
+        "ratio": 0.003,
+        "consistent": false,
+        "answer": "(6+8+11+13+100)*1"
+      }
+    },
+    {
+      "idx": 19,
+      "orig_chars": 3386,
+      "base_answer": "100+13*3+8+7+3",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "100+13*3+8+7+3"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": true,
+        "answer": "100+13*3+8+7+3"
+      },
+      "C_prune": {
+        "ratio": 0.89,
+        "consistent": true,
+        "answer": "100+13*3+8+7+3"
+      },
+      "D_memento": {
+        "ratio": 0.025,
+        "consistent": true,
+        "answer": "100+13*3+8+7+3"
+      }
+    },
+    {
+      "idx": 20,
+      "orig_chars": 41000,
+      "base_answer": "信息不足",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "信息不足"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": true,
+        "answer": "信息不足"
+      },
+      "C_prune": {
+        "ratio": 0.917,
+        "consistent": false,
+        "answer": "4*(100*25-(25*(9+1)-1))"
+      },
+      "D_memento": {
+        "ratio": 0.007,
+        "consistent": false,
+        "answer": "100*(25*4-9-1)+4+(25-25)"
+      }
+    },
+    {
+      "idx": 21,
+      "orig_chars": 2011,
+      "base_answer": "566)6*100-(100-75+13-4)",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "566)6*100-(100-75+13-4)"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "6*100-(100-75+13-4)"
+      },
+      "C_prune": {
+        "ratio": 0.928,
+        "consistent": false,
+        "answer": "5666*100-(100-75+13-4)"
+      },
+      "D_memento": {
+        "ratio": 0.055,
+        "consistent": false,
+        "answer": "6*100-(100-75+13-4)"
+      }
+    },
+    {
+      "idx": 22,
+      "orig_chars": 37211,
+      "base_answer": "811)(75-2)*(8+2)+75+6",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "811)(75-2)*(8+2)+75+6"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "信息不足"
+      },
+      "C_prune": {
+        "ratio": 0.907,
+        "consistent": true,
+        "answer": "811)(75-2)*(8+2)+75+6"
+      },
+      "D_memento": {
+        "ratio": 0.08,
+        "consistent": false,
+        "answer": "信息不足"
+      }
+    },
+    {
+      "idx": 23,
+      "orig_chars": 6580,
+      "base_answer": "100+75-(11*5-(13-5))",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "100+75-(11*5-(13-5))"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": true,
+        "answer": "100+75-(11*5-(13-5))"
+      },
+      "C_prune": {
+        "ratio": 0.872,
+        "consistent": false,
+        "answer": "11×5-(13-5)100+75-(11*5-(13-5))"
+      },
+      "D_memento": {
+        "ratio": 0.014,
+        "consistent": true,
+        "answer": "100+75-(11*5-(13-5))"
+      }
+    },
+    {
+      "idx": 24,
+      "orig_chars": 7717,
+      "base_answer": "(50+7)*(8/(9-7)-1)",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "(50+7)*(8/(9-7)-1)"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "信息不足"
+      },
+      "C_prune": {
+        "ratio": 0.852,
+        "consistent": true,
+        "answer": "(50+7)*(8/(9-7)-1)"
+      },
+      "D_memento": {
+        "ratio": 0.009,
+        "consistent": true,
+        "answer": "(50+7)*(8/(9-7)-1)"
+      }
+    },
+    {
+      "idx": 25,
+      "orig_chars": 17807,
+      "base_answer": "(25+9+5)*(13*3)-3",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "(25+9+5)*(13*3)-3"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "(13×(25+9+5)-3)×3"
+      },
+      "C_prune": {
+        "ratio": 0.888,
+        "consistent": true,
+        "answer": "(25+9+5)*(13*3)-3"
+      },
+      "D_memento": {
+        "ratio": 0.011,
+        "consistent": false,
+        "answer": "9×(5+3))×(3+3)"
+      }
+    },
+    {
+      "idx": 26,
+      "orig_chars": 7281,
+      "base_answer": "100+13+3+3+(100/25)",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "100+13+3+3+(100/25)"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "100+13+3+3+100/25"
+      },
+      "C_prune": {
+        "ratio": 0.842,
+        "consistent": true,
+        "answer": "100+13+3+3+(100/25)"
+      },
+      "D_memento": {
+        "ratio": 0.011,
+        "consistent": false,
+        "answer": "123"
+      }
+    },
+    {
+      "idx": 27,
+      "orig_chars": 6828,
+      "base_answer": "75+50+(25-25)*1-2",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "75+50+(25-25)*1-2"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": true,
+        "answer": "75+50+(25-25)*1-2"
+      },
+      "C_prune": {
+        "ratio": 0.866,
+        "consistent": true,
+        "answer": "75+50+(25-25)*1-2"
+      },
+      "D_memento": {
+        "ratio": 0.013,
+        "consistent": true,
+        "answer": "75+50+(25-25)*1-2"
+      }
+    },
+    {
+      "idx": 28,
+      "orig_chars": 12191,
+      "base_answer": "100+13*(8-6)+11+1",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "100+13*(8-6)+11+1"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "100+(13+11+8+6)*1"
+      },
+      "C_prune": {
+        "ratio": 0.813,
+        "consistent": true,
+        "answer": "100+13*(8-6)+11+1"
+      },
+      "D_memento": {
+        "ratio": 0.005,
+        "consistent": true,
+        "answer": "100+13*(8-6)+11+1"
+      }
+    },
+    {
+      "idx": 29,
+      "orig_chars": 6911,
+      "base_answer": "100+(13-7)*8+3*3",
+      "A_original": {
+        "ratio": 1.0,
+        "consistent": true,
+        "answer": "100+(13-7)*8+3*3"
+      },
+      "B_truncate": {
+        "ratio": 0.5,
+        "consistent": false,
+        "answer": "157)100+(13-7)*8+3*3"
+      },
+      "C_prune": {
+        "ratio": 0.865,
+        "consistent": true,
+        "answer": "100+(13-7)*8+3*3"
+      },
+      "D_memento": {
+        "ratio": 0.012,
+        "consistent": true,
+        "answer": "100+(13-7)*8+3*3"
+      }
+    }
+  ]
+}

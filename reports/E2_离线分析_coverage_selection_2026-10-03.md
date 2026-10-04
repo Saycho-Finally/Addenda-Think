@@ -73,7 +73,7 @@
 | deterministic fusion（零 LLM 聚类） | 0.216 | 机械并集的底线 |
 | **LLM fusion（Fusion-of-N 式，pro thinking-off）** | **0.716** | recall 全 1.0；t2 F1=1.000 零误报 |
 
-### 结论 C（fusion 完胜，假设验证）
+### 结论 C（fusion 显著优于 selection，假设验证）
 
 1. **LLM fusion（0.716）vs 最好单候选（类型口径 0 / 语义口径均值 ~0.6）**：合并显著优于选择
 2. **LLM fusion vs deterministic fusion = 3.3 倍**：LLM 合并的语义去重能力远超机械聚类
@@ -84,6 +84,6 @@
 ### 决策外挂的最终答案（批判→假设→验证闭环）
 
 - 可验证任务（E1）：selection 零损失，投票即验证 → `verifiable` 决策点用程序判定
-- 不可验证任务（E2）：selection 损失巨大，**fusion 完胜 selection** → `open` 决策点的
+- 不可验证任务（E2）：selection 损失巨大，**fusion 的 F1 显著高于最好单候选** → `open` 决策点的
   默认判定器从"选最好"改为**"合并"**（fusion 档），LLM judge 降级为 fusion 的质量抽检
 - 决策模型的正确姿势：不是"挑一个"，是"合所有"——且合并可以由确定性程序 + 轻量 LLM 完成

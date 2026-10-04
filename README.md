@@ -2,7 +2,7 @@
 
 **一句话**：推理强度旋钮（effort 档位）的价值**只在任务的能力边缘存在，且集中在第一档**——本项目用三个模型（DeepSeek deepseek-flash/ deepseek-v4-pro / 本地 Qwen3-4B）× 三类任务 × 18 个强度-采样任务点实测了这一点，并提出用**外挂采样（N 路便宜采样 + 数值投票 + 早停）替代高价位档位**：在能力边缘与深边缘任务上，零思考 × 4 路采样（off×4）达到 100% 精度，成本为同精度替代方案（high×4）的约一半（cd6：$0.48 vs $1.02）。
 
-> 作者：Sycho-Finally（独立研究者）｜ AI 使用声明见 [AI_DISCLOSURE.md](AI_DISCLOSURE.md) ｜ License: MIT
+> 作者：Saycho-Finally（独立研究者）｜ AI 使用声明见 [AI_DISCLOSURE.md](AI_DISCLOSURE.md) ｜ License: MIT
 
 ---
 

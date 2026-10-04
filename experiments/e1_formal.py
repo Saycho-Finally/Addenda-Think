@@ -1,7 +1,7 @@
-"""E1 正式版：外挂探索 vs 强度裸奔的等算力 Pareto 对比（扩展臂矩阵）。
+"""E1 正式版：项目探索 vs 强度裸奔的等算力 Pareto 对比（扩展臂矩阵）。
 
 相对首战（e1_pareto.py）的扩展：
-  1. 外挂曲线从 low×N 扩展到 off×N（便宜海量采样）与 high×N（贵档采样）——
+  1. 项目曲线从 low×N 扩展到 off×N（便宜海量采样）与 high×N（贵档采样）——
      回答"采样应该配哪个档"而不是"low 采样是否有效"
   2. 双任务：cd6（pro 能力边缘）+ cd7（深边缘），由 --suite 分别运行
   3. 逐题进度 JSONL 落盘（长批可观测性）
@@ -34,7 +34,7 @@ from exocortex.ledger import Ledger  # noqa: E402
 from exocortex.tasks import CountdownTask, MathBenchTask  # noqa: E402
 from exocortex.tasks.countdown import safe_eval_expr  # noqa: E402
 
-# 臂矩阵：(effort, n_multi)。n_multi=1 为强度曲线；>1 为外挂采样曲线。
+# 臂矩阵：(effort, n_multi)。n_multi=1 为强度曲线；>1 为项目采样曲线。
 ARMS = [
     ("off", 1), ("low", 1), ("high", 1), ("max", 1),
     ("low", 2), ("low", 4), ("low", 8),
@@ -113,7 +113,7 @@ def main() -> None:
     items = build_suite(args.suite, args.n)
     # 缓存友好口径（默认开）：共享说明进 system（跨臂跨题命中），题面只占 user 尾巴。
     # 采样独立性不受影响（温度 0.7 的采样分布与 prompt 前缀无关）；附带产出
-    # "共享前缀 + 多样尾巴 + 跨臂复用"场景的命中率数据（缓存外挂新数据点）。
+    # "共享前缀 + 多样尾巴 + 跨臂复用"场景的命中率数据（供缓存编排参考）。
     shared_system = None
     if args.cache_friendly and items and hasattr(items[0], "numbers"):
         shared_system = type(items[0]).INSTRUCTION

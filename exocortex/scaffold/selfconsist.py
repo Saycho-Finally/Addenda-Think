@@ -1,4 +1,4 @@
-"""E1 外挂探索臂：N 次低强度采样 + 多数投票。
+"""E1 项目探索臂：N 次低强度采样 + 多数投票。
 
 对标实验：单次高强度调用。等算力约束由 Ledger 对账：
 本臂总 completion tokens ≈ 高强度臂单次 completion tokens。

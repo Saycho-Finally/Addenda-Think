@@ -1,6 +1,6 @@
 """验证与聚合工具。
 
-阶段 0 的"外挂验证"用答案级验证（程序比对）；
+阶段 0 的"项目验证"用答案级验证（程序比对）；
 真·代码执行器 sandbox 是阶段 2 E2 的事，放这里同族但不混用。
 """
 
@@ -30,7 +30,7 @@ def majority_vote(answers: list[str]) -> tuple[str | None, dict[str, int]]:
 def coverage_selection_split(candidates: list[str], checker) -> dict:
     """coverage/selection 误差分解（立项分析的第三个空位）。
 
-    coverage：N 个候选里是否存在正确答案（外挂搜索救不了 coverage 失败）
+    coverage：N 个候选里是否存在正确答案（项目搜索救不了 coverage 失败）
     selection：正确答案存在时，投票/验证能否选中
     """
     keys = [a for a in candidates if a and a.strip()]

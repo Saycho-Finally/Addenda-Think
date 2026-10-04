@@ -1,6 +1,6 @@
-# PPBExt-Sample ｜ 补遗：推理强度与采样广度的等算力分配 · 三模型实验验证
+# PPBExt-Sample
 
-**一句话**：推理强度旋钮（effort 档位）的价值**只在任务的能力边缘存在，且集中在第一档**——本项目用三个模型（deepseek-flash / deepseek-v4-pro / 本地 Qwen3-4B）× 三类任务 × 18 个强度-采样任务点实测了这一点，并提出用**外挂采样（N 路便宜采样 + 数值投票 + 早停）替代高价位档位**：在能力边缘与深边缘任务上，零思考 × 4 路采样（off×4）达到 100% 精度，成本为同精度替代方案（high×4）的约一半（cd6：$0.48 vs $1.02）。
+**一句话**：推理强度旋钮（effort 档位）的价值**只在任务的能力边缘存在，且集中在第一档**——本项目用三个模型（deepseek-flash / deepseek-v4-pro / 本地 Qwen3-4B）× 三类任务 × 18 个强度-采样任务点实测了这一点，并提出用**项目采样（N 路便宜采样 + 数值投票 + 早停）替代高价位档位**：在能力边缘与深边缘任务上，零思考 × 4 路采样（off×4）达到 100% 精度，成本为同精度替代方案（high×4）的约一半（cd6：$0.48 vs $1.02）。
 
 > 作者：Saycho-Finally（独立研究者） ｜ AI 使用声明见 [AI_DISCLOSURE.md](AI_DISCLOSURE.md) ｜ License: MIT ｜ 依赖：requests（API 实验）｜ Python ≥3.10
 
@@ -11,7 +11,7 @@
 1. **强度-精度曲线的三模型实测**——deepseek-flash、deepseek-v4-pro、本地 Qwen3-4B（budget forcing）在 GSM8K-100 / Countdown-5/6/7 / MATH-500 L4-5 上的完整 effort 档位曲线，18 个任务点的精度与逐笔成本。
 2. **overthinking 的四次独立复现**——高价位档位（max）在 4 个独立场景中无一最优，其中 n=100 规模上 medium 档比 64-token 档**低 14 分**（0.77 vs 0.91，统计显著）。
 3. **E1 等算力对账框架**——11 臂（4 强度档 × 1 + low×{2,4,8} + high×{2,4} + off×{4,8}）× 逐笔 hit/miss/token 记账，直接输出"每百分点精度值多少美元"的 Pareto 对账。
-4. **外挂采样的边界实测**——零思考 × 4 路采样（off×4）在能力边缘（Countdown-6，n=12）与深边缘（Countdown-7，n=6）双双 100%，成本比 1×max 低 56%~78%；同时给出**不成立的边界**（详见「这个仓库不是什么」）。
+4. **项目采样的边界实测**——零思考 × 4 路采样（off×4）在能力边缘（Countdown-6，n=12）与深边缘（Countdown-7，n=6）双双 100%，成本比 1×max 低 56%~78%；同时给出**不成立的边界**（详见「这个仓库不是什么」）。
 
 ## 核心结果：E1 等算力 Pareto（pro，off-peak，Countdown-6，n=12）
 
@@ -87,7 +87,7 @@ python experiments/stage0_curve.py --suite gsm8k --n 100 --model_path <Qwen3-4B-
 - Apple（2025）：推理链的三区制（有效/冗余/有害）——overthinking 的概念来源
 - Reasonix：DeepSeek 前缀缓存纪律与三区会话
 - NVIDIA Dynamo 文档：块价值分层（thinking token 零复用）
-- Vercel Jev / AWS Strands Decider：决策模型品类（本文的"判定应外挂化"立场的对照面）
+- Vercel Jev / AWS Strands Decider：决策模型品类（本文的"判定应项目化"立场的对照面）
 
 
 ---

@@ -42,7 +42,7 @@
 被前沿支配（同价位 low×2/high×1 精度更高）；low×8 与 high×4 在 cd6 被完全支配
 （off×4/low×4 同精度更便宜）。
 
-## 四、决策外挂（DecisionCore）的输入
+## 四、判定/选择层的输入
 
 1. **verifiable 决策点的实证支撑**：可验证任务上 selection 零损失——DecisionCore 的
    program_verifier 光谱位在这类任务上是最优解（已实现并测试）
@@ -81,7 +81,7 @@
 4. **budget_guard 机制第三次复现并被修复合用**：fusion（轻认知合并）用 thinking=False——
    分任务 thinking 开关在真实管线里的实战验证
 
-### 决策外挂的最终答案（批判→假设→验证闭环）
+### 判定/选择层的最终答案（批判到假设到验证的闭环）
 
 - 可验证任务（E1）：selection 零损失，投票即验证 → `verifiable` 决策点用程序判定
 - 不可验证任务（E2）：selection 损失巨大，**fusion 的 F1 显著高于最好单候选** → `open` 决策点的

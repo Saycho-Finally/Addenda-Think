@@ -1,10 +1,10 @@
-"""E1：外挂探索 vs 强度裸奔 的等算力 Pareto 对比（阶段 2 首个核心实验）。
+"""E1：项目探索 vs 强度裸奔 的等算力 Pareto 对比（阶段 2 首个核心实验）。
 
 设计（立项分析阶段 2 的 E1 + 等算力记账硬规矩）：
   强度曲线：单次调用，effort ∈ {off, low, high, max} → 4 个 (总token, acc) 点
-  外挂曲线：effort=low × N 次采样多数投票，N ∈ {2,4,8} → 3 个点（N=1 与强度曲线 low 重合）
-  比较方式：在等总 completion token 处，外挂曲线是否高于强度曲线
-  （即外挂是否把 Pareto 前沿外推，sleep-time compute 论文的检验框架）
+  项目曲线：effort=low × N 次采样多数投票，N ∈ {2,4,8} → 3 个点（N=1 与强度曲线 low 重合）
+  比较方式：在等总 completion token 处，项目曲线是否高于强度曲线
+  （即项目是否把 Pareto 前沿外推，sleep-time compute 论文的检验框架）
 
 Countdown 投票键：按表达式的**数值结果**投票（3*4 与 4*3 同票），
 非法表达式的候选记废票——这是 Countdown 专属的正确投票语义。
@@ -128,7 +128,7 @@ def main() -> None:
         print(f"[strength] {arm} acc={results['arms'][-1]['accuracy']} "
               f"tok={ledger.arm_summary(arm)['completion_tokens']}", flush=True)
 
-    # ---- 外挂曲线（low × N 投票，顺序早停：连续 stop_k 票一致即停）
+    # ---- 项目曲线（low × N 投票，顺序早停：连续 stop_k 票一致即停）
     stop_k = 3
     for n_multi in N_LADDER:
         arm = f"{cfg['model']}@lowx{n_multi}"

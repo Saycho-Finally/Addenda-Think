@@ -21,8 +21,9 @@ import os
 import re
 import sys
 
-CORPUS = ("D:/agentwork/workbuddy/code/1-思维方式/exocortex/results/"
-          "anatomy_raw_deepseek-v4-pro_countdown6_211114.jsonl")
+CORPUS = os.environ.get(
+    "ANATOMY_CORPUS",
+    "../exocortex/results/anatomy_raw_deepseek-v4-pro_countdown6_211114.jsonl")
 
 KEY_PAT = re.compile(r"\d|[+\-*/×÷=]")     # 关键代理：含数字或运算符
 

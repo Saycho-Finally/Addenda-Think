@@ -7,12 +7,12 @@
 
 ## 一、臂级 coverage/selection 分解
 
-**Selection 损失 = coverage − accuracy**（coverage 高但 acc 低 = 投票选错；两者相等 = 选择完美）。
+**Selection 损失 = coverage − accuracy**（coverage 高但 acc 低 = 投票选错；两者相等 = 选择无损失）。
 
 - **cd6：11 臂全部 selection 损失 = 0.0000**
 - **cd7：7 臂全部 selection 损失 = 0.0000**
 
-**结论 A（可验证任务域）**：数值投票即完美选择器——coverage 内的多数投票零失败。
+**结论 A（可验证任务域）**：数值投票即无失败的选择器——coverage 内的多数投票零失败。
 在 Countdown 类可验证任务上，selection 是**已解决的廉价步骤**（S0 的第四条结论获得臂级全量确认）。
 
 **对 E2 的方向修正**：原设计"程序验证器作黑盒选择器"在这类任务上**增量空间为零**——

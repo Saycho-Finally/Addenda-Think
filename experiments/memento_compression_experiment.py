@@ -16,12 +16,13 @@ import re
 import sys
 import time
 
-sys.path.insert(0, "D:/agentwork/workbuddy/code/1-思维方式/exocortex")
+sys.path.insert(0, os.environ.get("EXOCORTEX_ROOT", "../exocortex"))
 
 from exocortex.adapter import GenRequest, adapter_from_config  # noqa: E402
 
-CORPUS = ("D:/agentwork/workbuddy/code/1-思维方式/exocortex/results/"
-          "anatomy_raw_deepseek-v4-pro_countdown6_211114.jsonl")
+CORPUS = os.environ.get(
+    "ANATOMY_CORPUS",
+    "../exocortex/results/anatomy_raw_deepseek-v4-pro_countdown6_211114.jsonl")
 
 ANSWER_PROMPT = ("以下是一段问题求解的推理过程。请**仅根据这段推理**写出最终答案"
                  "（表达式形式）。若推理信息不足以确定答案，输出「信息不足」。\n\n"

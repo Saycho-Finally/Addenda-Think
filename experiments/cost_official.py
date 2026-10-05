@@ -9,7 +9,7 @@
   pro    input-hit $0.036/M  input-miss $0.66/M   output $1.98/M
 Peak = UTC 周一至五 01-04 与 06-10 = 北京 09-12 与 14-18。
 
-结论与标注见 results/成本分析_官方口径_2026-10-01.md
+逐笔与汇总结果见 results/cost_official_2026-10-01.json
 """
 
 import json
@@ -79,7 +79,7 @@ def main() -> None:
         "total_mix_usd": round(total_mix, 2),
         "total_mix_cny": round(total_mix * CNY, 1),
     }
-    with open("results/成本分析_官方口径_2026-10-01.json", "w", encoding="utf-8") as f:
+    with open("results/cost_official_2026-10-01.json", "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
     for r in rows:
         print(f"{r['model']:16s} calls={r['calls']:5d} out={r['out']:9,d} "

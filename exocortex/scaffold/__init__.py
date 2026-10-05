@@ -2,5 +2,8 @@
 
 from exocortex.scaffold.verifier import majority_vote, normalize_answer
 from exocortex.scaffold.selfconsist import SelfConsistencyArm
+from exocortex.scaffold.budget_guard import (BudgetGuard, TaskTier,
+                                             recommended_config)
 
-__all__ = ["SelfConsistencyArm", "majority_vote", "normalize_answer"]
+__all__ = ["SelfConsistencyArm", "majority_vote", "normalize_answer",
+           "BudgetGuard", "TaskTier", "recommended_config"]

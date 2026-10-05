@@ -52,7 +52,7 @@
 ## 仓库结构
 
 ```
-exocortex/         核心库（adapter 多模型接入 / ledger 逐笔记账 / tasks 任务族 / scaffold 早停·验证·解剖）
+exocortex/         核心库（adapter 多模型接入 / ledger 逐笔记账 / tasks 任务族 / scaffold 早停·验证·预算守卫·解剖）
 experiments/       全部实验脚本（stage0 强度曲线 / e1 等算力对账 / anatomy 推理解剖 / 成本对账）
 results/           原始运行数据（JSON，含逐笔 usage 与早停过程）
 reports/           阶段 0 收官报告 / 三模型全表 / 架构前沿分析
@@ -62,6 +62,8 @@ reports/           阶段 0 收官报告 / 三模型全表 / 架构前沿分析
 
 ```bash
 pip install requests
+# 支出级自检（纯离线，零成本）：预算守卫档位配置与反馈环
+python experiments/budget_guard_check.py
 # 强度曲线（单模型 × 4 档 × n 题）
 python experiments/stage0_curve.py --suite countdown6 --n 12 \
     --api base_url=https://api.deepseek.com model=deepseek-v4-pro key=$DEEPSEEK_API_KEY

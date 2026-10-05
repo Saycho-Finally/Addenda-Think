@@ -16,7 +16,9 @@ import re
 import sys
 import time
 
-sys.path.insert(0, os.environ.get("EXOCORTEX_ROOT", "../exocortex"))
+sys.path.insert(0, os.environ.get(
+    "PPB_SAMPLE_ROOT",
+    os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))))
 
 from exocortex.adapter import GenRequest, adapter_from_config  # noqa: E402
 

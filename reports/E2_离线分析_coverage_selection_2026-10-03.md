@@ -62,7 +62,7 @@
 
 ## 七、LLM fusion 正式对照（2026-10-03 晚，追加实验）
 
-> 数据：`addenda-decide/results/e2_llm_fusion_results.json`（复用第一轮 30 候选，
+> 数据：决策层的 E2 对照结果 `e2_llm_fusion_results.json`（复用第一轮 30 候选，
 > LLM fusion 重跑，pro thinking-off + max=2500——fusion 是轻认知合并任务）
 
 ### 三层对照（均值，flash 评测口径）

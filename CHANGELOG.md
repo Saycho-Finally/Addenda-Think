@@ -22,6 +22,8 @@
 - `exocortex/__init__.py` 的 `__version__` 与 CHANGELOG 对齐（0.1.0 → 0.3.0）
 - `experiments/cost_official.py` 的 docstring 指向了一个不存在的 .md（悬空引用），
   改为指向实际产物；该脚本的输出文件名改为 ASCII（`cost_official_2026-10-01.json`）
+- 报告《E2 离线分析》中的跨仓库路径引用改为按功能描述
+- `PPB_SAMPLE_ROOT` 的默认值改为以脚本位置解析（原相对路径依赖当前工作目录）
 
 ## [0.2.0] - 2026-10-03
 

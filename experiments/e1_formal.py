@@ -162,20 +162,19 @@ def main() -> None:
         t0 = time.time()
         for i, item in enumerate(items):
             msgs = build_msgs(item)
-            gens = run_prompt_n(msgs, None if effort == "off" else effort, n_multi)
-            for g in gens:
-                ledger.log(arm, adapter.name, g)
-                raw = g.raw or {}
-                arm_hit += raw.get("prompt_cache_hit_tokens") or 0
-                arm_miss += raw.get("prompt_cache_miss_tokens") or 0
             if hasattr(item, "numbers"):
-                # 顺序早停在 generate_n 内部不可用（批量生成），改为逐个生成+早停
-                gens = gens[:1]
+                # Countdown 类：批量生成无法做顺序早停；而"先批量跑满、再丢弃重跑"
+                # 会让被丢弃的调用**全额计费**（2026-10-07 修正，原实现使 ×4 臂
+                # 实际调用达名义的 1.58 倍）。这里直接串行生成 + 早停。
+                # thinking 用 effort != "off" 判断（原写 effort is not None，
+                # 而 off 臂的 effort 是字符串 "off"，导致串行段误开思考）。
                 req = GenRequest(messages=msgs,
                                  max_tokens=args.max_tokens,
                                  effort=None if effort == "off" else effort,
-                                 thinking=effort is not None, temperature=0.7)
-                for k in range(1, n_multi):
+                                 thinking=effort != "off",
+                                 temperature=0.7)
+                gens = []
+                for k in range(n_multi):
                     g = adapter.generate(req)
                     gens.append(g)
                     ledger.log(arm, adapter.name, g)
@@ -194,6 +193,12 @@ def main() -> None:
                 sel = ok if cov else None
                 cov_sel.append({"coverage": cov, "selection": sel})
             else:
+                gens = run_prompt_n(msgs, None if effort == "off" else effort, n_multi)
+                for g in gens:
+                    ledger.log(arm, adapter.name, g)
+                    raw = g.raw or {}
+                    arm_hit += raw.get("prompt_cache_hit_tokens") or 0
+                    arm_miss += raw.get("prompt_cache_miss_tokens") or 0
                 from exocortex.scaffold.verifier import majority_vote
                 top, _ = majority_vote([g.text for g in gens])
                 ok = MathBenchTask.check(item, top or "")

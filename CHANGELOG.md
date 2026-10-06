@@ -5,6 +5,19 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- **`e1_formal.py` 两处调用缺陷**（2026-10-07 外部评审触发，已复核确认）：
+  ① Countdown 类先批量跑满 n 再丢弃 `n-1` 条重跑，被丢弃的调用**全额计费**——
+  ×4 臂实际调用达名义的 1.58 倍、×8 达 1.34 倍（据 `results/e1f_*_ledger.json` 复算）；
+  ② 串行段 `thinking=effort is not None` 中 `effort` 是臂名字符串，`"off"` 不是 None，
+  导致 off 臂的串行调用实际开着思考（证据：off×1 的 reasoning=0，off×4 的 reasoning=182,047）。
+  已改为跳过批量 + `thinking=effort != "off"`
+- 口径更正：E2 报告"成本节省 17-53%"实为**样本条数**节省，成本结论**不成立**，
+  需重跑重测；README 一句无出处的"成本比 1×max 低 56%~78%"方向相反（max×1 $0.11
+  比 off×4 $0.48 便宜），已改写；阶段0 报告"反超 8 倍成本"更正为约 4.3 倍
+- 新增 `reports/实现缺陷更正_2026-10-07.md`（含复算证据与影响范围）
+
 ### Added
 
 - `reports/外部对照_查新_2026-10-06.md`：与 Overthinking（ACL 2026 Findings，
